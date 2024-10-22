@@ -70,3 +70,8 @@ module.exports.loginUser = async (req, res) => {
         return res.status(500).json({ message: "An error occurred during login." });
     }
 };
+
+module.exports.logout = async (req, res) => {
+    res.cookie("token", "");
+    res.redirect("/");
+}

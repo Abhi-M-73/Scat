@@ -44,8 +44,8 @@ if (process.env.NODE_ENV === "development") {
     });
 }
 
-router.get("/", (req, res) => {
-    res.send("Owners route is working");
+router.get("/admin", (req, res) => {
+    res.render("createproducts");
 });
 
 module.exports = router;
